@@ -13,3 +13,12 @@
   border-width: 1px;
   border-style: solid;
 }
+
+.ReviewImage {
+  height: 300px;
+}
+
+.ReviewBody {
+  width: 600px;
+  text-align: center;
+}
