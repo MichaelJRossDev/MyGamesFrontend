@@ -5,7 +5,7 @@ import SignInPage from './components/SignInPage';
 
 import './App.css';
 import { useState } from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -23,6 +23,16 @@ function App() {
       </div>
     </BrowserRouter>
   );
+  
+  // return (
+  //     <div>
+  //       <Header />
+  //       <SearchPage />
+  //       <ReviewPage />
+  //       <SignInPage />
+  //     </div>
+  // );
+
 }
 
 export default App;

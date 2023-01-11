@@ -8,8 +8,8 @@ const SearchPage = () => {
     return (
         <div>
             <h2>SearchPage</h2>
-            <SortByMenu />
-            <ReviewList />
+            <SortByMenu setReviews={setReviews} reviews={reviews}/>
+            <ReviewList reviews={reviews}/>
         </div>
     )
 }
