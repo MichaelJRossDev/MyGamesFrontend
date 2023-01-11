@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<SearchPage />} />
-          <Route path="/:review_id" element={<ReviewPage />} />
+          <Route path="/review/:review_id" element={<ReviewPage />} />
           <Route path="/signin" element={<SignInPage />} />
         </Routes>
       </div>
