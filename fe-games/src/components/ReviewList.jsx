@@ -1,10 +1,10 @@
 import ReviewCard from "./ReviewCard";
 
-const ReviewList = () => {
+const ReviewList = (params) => {
+    const reviews = params.reviews;
     return (
-        <div>
-            <p>ReviewList</p>
-            <ReviewCard />
+        <div className="ReviewList">
+            {reviews.map(review => <ReviewCard key={review.review_id} review={review} />)}
         </div>
     )
 }
