@@ -1,10 +1,11 @@
 import ReviewCard from "./ReviewCard";
+import { Link } from "react-router-dom";
 
 const ReviewList = (params) => {
     const reviews = params.reviews;
     return (
         <div className="ReviewList">
-            {reviews.map(review => <ReviewCard key={review.review_id} review={review} />)}
+            {reviews.map(review => <Link to={`/review/${review.review_id}`}><ReviewCard key={review.review_id} review={review} /></Link>)}
         </div>
     )
 }

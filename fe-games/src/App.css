@@ -14,6 +14,26 @@
   border-style: solid;
 }
 
+
+.ReviewImage {
+  height: 300px;
+}
+
+.ReviewBody {
+  width: 600px;
+  text-align: center;
+}
+
+.FullReview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LeftButton {
+  align-self: flex-start;
+}
+
 .CommentCard {
   border: rgb(0, 0, 0);
   border-width: 1px;

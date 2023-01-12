@@ -1,7 +1,6 @@
 const ReviewCard = (params) => {
     const review = params.review;
-    const date = new Date(params.review.created_at)
-    console.log(date.toLocaleDateString());
+    const date = new Date(params.review.created_at);
 
     return (
         <div className="ReviewCard">
