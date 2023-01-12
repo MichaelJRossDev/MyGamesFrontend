@@ -3,7 +3,6 @@ import { useParams, Link } from "react-router-dom";
 
 const FullReview = () => {
     const [review, setReview] = useState({});
-    const [comments, setComments] = useState([]);
     const { review_id } = useParams();
     const date = new Date(review.created_at);
 
@@ -11,12 +10,6 @@ const FullReview = () => {
     .then(response => response.json())
     .then(data => {
         setReview(data.review);
-    })
-
-    fetch(`https://michaels-games.onrender.com/api/reviews/${review_id}/comments`)
-    .then(response => response.json())
-    .then(data => {
-        setComments(data.comments);
     })
 
     return (
