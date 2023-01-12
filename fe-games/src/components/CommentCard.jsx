@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-const CommentCard = () => {
-    const [comment, setComment] = useState({})
-
+const CommentCard = (params) => {
+    const comment = params.comment;
+    const date = new Date(comment.created_at)
     return (
-        <div>
-            <p>CommentCard</p>
+        <div className="CommentCard">
+            <h4>{comment.author}</h4>
+            <p>{comment.body}</p>
+            <p>❤️{comment.votes} {date.toDateString()}</p>
         </div>
     )
 }
