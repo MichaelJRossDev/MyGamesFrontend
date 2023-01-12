@@ -22,3 +22,13 @@
   width: 600px;
   text-align: center;
 }
+
+.FullReview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LeftButton {
+  align-self: flex-start;
+}

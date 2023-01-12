@@ -21,11 +21,11 @@ const FullReview = () => {
 
     return (
         <div className="FullReview">
-            <Link to="/" ><button>🏠</button></Link>
+            <Link to="/" ><button className="LeftButton">🏠</button></Link>
             <h2>{review.title}</h2>
             <img className="ReviewImage" src={review.review_img_url} alt="image related to review" />
             <p className="ReviewBody">{review.review_body}</p>
-            <button>❤️{review.votes}</button><button>💬{review.comment_count}</button>
+            <button className="LeftButton">❤️{review.votes}</button><button className="LeftButton">💬{review.comment_count}</button>
             <p>Written by {review.owner}</p>
             <p>{date.toDateString()}</p>
         </div>
