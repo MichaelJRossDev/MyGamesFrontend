@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
@@ -6,11 +7,14 @@ const FullReview = () => {
     const { review_id } = useParams();
     const date = new Date(review.created_at);
 
-    fetch(`https://michaels-games.onrender.com/api/reviews/${review_id}`)
-    .then(response => response.json())
-    .then(data => {
-        setReview(data.review);
-    })
+    useEffect(() => {
+
+        fetch(`https://michaels-games.onrender.com/api/reviews/${review_id}`)
+        .then(response => response.json())
+        .then(data => setReview(data.review))
+
+    }, [review]    
+    )
 
     return (
         <div className="FullReview">
