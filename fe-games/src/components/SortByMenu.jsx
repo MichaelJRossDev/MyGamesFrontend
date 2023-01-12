@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 const SortByMenu = (params) => {
@@ -6,15 +7,21 @@ const SortByMenu = (params) => {
     const [category, setCategory] = useState('');
 
     const setReviews = params.setReviews;
+    
+    useEffect(() => {
 
-    fetch('https://michaels-games.onrender.com/api/reviews')
-    .then(output => output.json())
-    .then(data => data.reviews)
-    .then(reviews => {
+        fetch('https://michaels-games.onrender.com/api/reviews')
+        .then(output => output.json())
+        .then(data => data.reviews)
+        .then(reviews => {
         setReviews(reviews)
         //console.log(reviews);
-    })
-    .catch(err => console.log(err));
+        })
+        .catch(err => console.log(err));
+    }, [sortBy, order, category]
+    )
+
+    
 
 
 
