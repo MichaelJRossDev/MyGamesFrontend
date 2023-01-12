@@ -13,3 +13,9 @@
   border-width: 1px;
   border-style: solid;
 }
+
+.CommentCard {
+  border: rgb(0, 0, 0);
+  border-width: 1px;
+  border-style: dashed;
+}
